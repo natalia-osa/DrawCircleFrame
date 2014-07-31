@@ -95,7 +95,7 @@ Clone and see the demo for more examples about implementation. You can add the v
 
 // in your controller you can change outlook of the control
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidLoad];
+    [super viewDidAppear:animated];
     
 	// setup all properties eg
     [_dcfExampleView.button.dcfView setLineColor:[UIColor greenColor]];
