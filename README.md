@@ -97,10 +97,10 @@ Clone and see the demo for more examples about implementation. You can add the v
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidLoad];
     
+	// setup all properties eg
+    [_dcfExampleView.button.dcfView setLineColor:[UIColor greenColor]];
 	// drawing happens after calling this method
     [_dcfExampleView.button.dcfView drawBezierAnimated:YES];
-    // setup all properties eg
-    [_dcfExampleView.button.dcfView setLineColor:[UIColor greenColor]];
 }
 ```
 ## Author
