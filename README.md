@@ -1,3 +1,7 @@
+
+[![Version](https://cocoapod-badges.herokuapp.com/v/DrawCircleFrame/badge.png)](http://cocoadocs.org/docsets/DrawCircleFrame) 
+[![Platform](https://cocoapod-badges.herokuapp.com/p/DrawCircleFrame/badge.png)](http://cocoadocs.org/docsets/DrawCircleFrame) 
+
 <p align="center" ><img src="https://raw.github.com/natalia-osa/DrawCircleFrame/master/ReadmeImages/Demo.gif" alt="DrawCircleFrame" title="DrawCircleFrame" height="240"></p>
 
 Small project allowing to highlight given option via drawing a circle around it. 
