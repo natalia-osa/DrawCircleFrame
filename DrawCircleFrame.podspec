@@ -12,4 +12,9 @@ Pod::Spec.new do |spec|
   spec.source_files = 'DrawCircleFrame/DrawCircleFrame/*.{h,m}'
 
   spec.frameworks   = ['Foundation', 'UIKit', 'CoreGraphics', 'QuartzCore']
+
+  spec.subspec 'NOCategories' do |subspec|
+    subspec.source_files = 'NOCategories/NSString+NOCSize.*'
+  end
+
 end

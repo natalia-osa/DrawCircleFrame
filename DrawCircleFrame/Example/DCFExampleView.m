@@ -7,7 +7,7 @@
 //
 
 #import "DCFExampleView.h"
-#import "NSString+Size.h"
+#import <NOCategories/NSString+NOCSize.h>
 
 @interface DCFExampleView ()
 
@@ -44,7 +44,7 @@
     [super layoutSubviews];
     CGRect rect = self.bounds;
     
-    CGSize buttonSize = [self.button.titleLabel.text ios67sizeWithFont:self.button.titleLabel.font constrainedToSize:CGSizeMake(300.f, 200.f)];
+    CGSize buttonSize = [self.button.titleLabel.text noc_backwardCompatibleSizeWithFont:self.button.titleLabel.font constrainedToSize:CGSizeMake(300.f, 200.f)];
     CGRect buttonRect = CGRectMake(floorf((CGRectGetWidth(rect) - buttonSize.width) / 2.f), floorf((CGRectGetHeight(rect) - buttonSize.height) / 2.f), buttonSize.width, buttonSize.height);
     [self.button setFrame:buttonRect];
 }

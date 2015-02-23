@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6426928919862BED00724413 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 6426928819862BED00724413 /* NSString+Size.m */; };
+		13F90B542EBFA205A358564F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3955F68185835A635B04E5 /* libPods.a */; };
 		645947DD197E75C4000B80E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645947DC197E75C4000B80E7 /* Foundation.framework */; };
 		645947DF197E75C4000B80E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645947DE197E75C4000B80E7 /* CoreGraphics.framework */; };
 		645947E1197E75C4000B80E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645947E0197E75C4000B80E7 /* UIKit.framework */; };
@@ -38,8 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6426928719862BED00724413 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Size.h"; path = "DrawCircleFrame/NSString+Size.h"; sourceTree = "<group>"; };
-		6426928819862BED00724413 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Size.m"; path = "DrawCircleFrame/NSString+Size.m"; sourceTree = "<group>"; };
+		5A21ABAC30A7F5F497835DBE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		645947D9197E75C4000B80E7 /* DrawCircleFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawCircleFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645947DC197E75C4000B80E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		645947DE197E75C4000B80E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,6 +64,8 @@
 		64594822197E845A000B80E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		64C696301987A115006056E8 /* DCFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCFButton.h; path = DrawCircleFrame/DCFButton.h; sourceTree = "<group>"; };
 		64C696311987A115006056E8 /* DCFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCFButton.m; path = DrawCircleFrame/DCFButton.m; sourceTree = "<group>"; };
+		97E7BA05CFE39E345D81160B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9C3955F68185835A635B04E5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 				645947DF197E75C4000B80E7 /* CoreGraphics.framework in Frameworks */,
 				645947E1197E75C4000B80E7 /* UIKit.framework in Frameworks */,
 				645947DD197E75C4000B80E7 /* Foundation.framework in Frameworks */,
+				13F90B542EBFA205A358564F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,13 +94,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6426928619862BD400724413 /* Categories */ = {
+		1748EA2AEB33B33FB79AC8EA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6426928719862BED00724413 /* NSString+Size.h */,
-				6426928819862BED00724413 /* NSString+Size.m */,
+				5A21ABAC30A7F5F497835DBE /* Pods.debug.xcconfig */,
+				97E7BA05CFE39E345D81160B /* Pods.release.xcconfig */,
 			);
-			name = Categories;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		645947D0197E75C4000B80E7 = {
@@ -108,6 +110,7 @@
 				645947FB197E75C4000B80E7 /* DrawCircleFrameTests */,
 				645947DB197E75C4000B80E7 /* Frameworks */,
 				645947DA197E75C4000B80E7 /* Products */,
+				1748EA2AEB33B33FB79AC8EA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +131,7 @@
 				645947DE197E75C4000B80E7 /* CoreGraphics.framework */,
 				645947E0197E75C4000B80E7 /* UIKit.framework */,
 				645947F5197E75C4000B80E7 /* XCTest.framework */,
+				9C3955F68185835A635B04E5 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,7 +193,6 @@
 				64594817197E78A9000B80E7 /* DCFView.m */,
 				64C696301987A115006056E8 /* DCFButton.h */,
 				64C696311987A115006056E8 /* DCFButton.m */,
-				6426928619862BD400724413 /* Categories */,
 			);
 			name = DrawCircleFrame;
 			sourceTree = "<group>";
@@ -228,10 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64594805197E75C4000B80E7 /* Build configuration list for PBXNativeTarget "DrawCircleFrame" */;
 			buildPhases = (
+				F698A817EB4979820374E92D /* Check Pods Manifest.lock */,
 				645947D5197E75C4000B80E7 /* Sources */,
 				645947D6197E75C4000B80E7 /* Frameworks */,
 				645947D7197E75C4000B80E7 /* Resources */,
 				OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */,
+				FA6908EA992F018759DA8D01 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,6 +319,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		F698A817EB4979820374E92D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FA6908EA992F018759DA8D01 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -339,7 +374,6 @@
 				64594818197E78A9000B80E7 /* DCFView.m in Sources */,
 				6459481B197E78CE000B80E7 /* DCFAppDelegate.m in Sources */,
 				64594821197E78DF000B80E7 /* DCFExampleViewController.m in Sources */,
-				6426928919862BED00724413 /* NSString+Size.m in Sources */,
 				64C696321987A115006056E8 /* DCFButton.m in Sources */,
 				6459481E197E78D7000B80E7 /* DCFExampleView.m in Sources */,
 			);
@@ -457,6 +491,7 @@
 		};
 		64594806197E75C4000B80E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A21ABAC30A7F5F497835DBE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -471,6 +506,7 @@
 		};
 		64594807197E75C4000B80E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E7BA05CFE39E345D81160B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

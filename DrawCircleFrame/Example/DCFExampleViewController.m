@@ -8,7 +8,7 @@
 
 #import "DCFExampleViewController.h"
 #import "DCFExampleView.h"
-#import "NSString+Size.h"
+#import <NOCategories/NSString+NOCSize.h>
 #import "DCFButton.h"
 
 @interface DCFExampleViewController ()
@@ -66,14 +66,14 @@
     _button = [[DCFButton alloc] init];
     [self.button.dcfView setLineColor:[UIColor greenColor]];
     
-    __weak __typeof(_button)weakButton = _button;
-    [_button.dcfView setCompletionBlock:^{
+    __weak __typeof(self.button)weakButton = self.button;
+    [self.button.dcfView setCompletionBlock:^{
         [weakButton.dcfView setHidden:YES];
     }];
     
     [self.button setTitle:NSLocalizedString(@"Highlight me!", nil) forState:UIControlStateNormal];
     [self.button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-    CGSize buttonSize = [_button.titleLabel.text ios67sizeWithFont:_button.titleLabel.font constrainedToSize:CGSizeMake(200.f, 70.f)];
+    CGSize buttonSize = [_button.titleLabel.text noc_backwardCompatibleSizeWithFont:self.button.titleLabel.font constrainedToSize:CGSizeMake(200.f, 70.f)];
     self.button.frame = CGRectMake(0.0, 0.0, buttonSize.width, buttonSize.height);
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:self.button];

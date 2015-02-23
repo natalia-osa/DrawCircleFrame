@@ -1,0 +1,10 @@
+PODS:
+  - NOCategories (0.1)
+
+DEPENDENCIES:
+  - NOCategories
+
+SPEC CHECKSUMS:
+  NOCategories: e51eccd229bde902a6b87677fc1c97e7bf243b7c
+
+COCOAPODS: 0.35.0
