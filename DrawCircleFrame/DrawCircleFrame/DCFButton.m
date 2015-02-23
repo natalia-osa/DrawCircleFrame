@@ -34,7 +34,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    [_dcfView setFrame:self.bounds];
+    [self.dcfView setFrame:self.bounds];
 }
 
 @end

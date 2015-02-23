@@ -11,7 +11,7 @@
 
 @interface DCFExampleView ()
 
-@property (nonatomic, strong) CAGradientLayer *gradientLayer;
+@property (nonatomic, readonly) CAGradientLayer *gradientLayer;
 
 @end
 
@@ -44,9 +44,9 @@
     [super layoutSubviews];
     CGRect rect = self.bounds;
     
-    CGSize buttonSize = [_button.titleLabel.text ios67sizeWithFont:_button.titleLabel.font constrainedToSize:CGSizeMake(300.f, 200.f)];
+    CGSize buttonSize = [self.button.titleLabel.text ios67sizeWithFont:self.button.titleLabel.font constrainedToSize:CGSizeMake(300.f, 200.f)];
     CGRect buttonRect = CGRectMake(floorf((CGRectGetWidth(rect) - buttonSize.width) / 2.f), floorf((CGRectGetHeight(rect) - buttonSize.height) / 2.f), buttonSize.width, buttonSize.height);
-    [_button setFrame:buttonRect];
+    [self.button setFrame:buttonRect];
 }
 
 - (void)layoutSublayersOfLayer:(CALayer *)layer {

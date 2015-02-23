@@ -13,31 +13,23 @@
 
 @interface DCFExampleViewController ()
 
-@property (nonatomic, weak) DCFExampleView *dcfExampleView;
-@property (nonatomic, strong, readonly) DCFButton *button;
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, weak, readonly) DCFExampleView *aView;
+@property (nonatomic, readonly) DCFButton *button;
+@property (nonatomic) NSTimer *timer;
 
 @end
 
 @implementation DCFExampleViewController
 
-- (id)init {
-    self = [super init];
-    if (self) {
-    }
-    
-    return self;
-}
-
 #pragma mark - View lifecycle
 
 - (void)loadView {
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
-    
     DCFExampleView *view = [[DCFExampleView alloc] initWithFrame:rect];
+    [view setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     
-    //local
-    _dcfExampleView = view;
+    // local for easier access
+    _aView = view;
     self.view = view;
 }
 
@@ -50,41 +42,41 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    _timer = [NSTimer scheduledTimerWithTimeInterval:5.f target:self selector:@selector(redrawFrame:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:5.f target:self selector:@selector(redrawFrame:) userInfo:nil repeats:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    if (_timer && [_timer isValid]) {
-        [_timer invalidate];
-        _timer = nil;
+    if (self.timer && [self.timer isValid]) {
+        [self.timer invalidate];
+        self.timer = nil;
     }
 }
 
 #pragma mark - Custom methods
 
 - (void)redrawFrame:(NSTimer *)timer {
-    [_button.dcfView setHidden:NO];
-    [_button.dcfView drawBezierAnimated:YES];
-    [_dcfExampleView.button.dcfView drawBezierAnimated:YES];
+    [self.button.dcfView setHidden:NO];
+    [self.button.dcfView drawBezierAnimated:YES];
+    [self.aView.button.dcfView drawBezierAnimated:YES];
 }
 
 - (void)setupNavigationItems {
     _button = [[DCFButton alloc] init];
-    [_button.dcfView setLineColor:[UIColor greenColor]];
+    [self.button.dcfView setLineColor:[UIColor greenColor]];
     
     __weak __typeof(_button)weakButton = _button;
     [_button.dcfView setCompletionBlock:^{
         [weakButton.dcfView setHidden:YES];
     }];
     
-    [_button setTitle:NSLocalizedString(@"Highlight me!", nil) forState:UIControlStateNormal];
-    [_button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [self.button setTitle:NSLocalizedString(@"Highlight me!", nil) forState:UIControlStateNormal];
+    [self.button setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     CGSize buttonSize = [_button.titleLabel.text ios67sizeWithFont:_button.titleLabel.font constrainedToSize:CGSizeMake(200.f, 70.f)];
-    _button.frame = CGRectMake(0.0, 0.0, buttonSize.width, buttonSize.height);
+    self.button.frame = CGRectMake(0.0, 0.0, buttonSize.width, buttonSize.height);
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:_button];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:self.button];
     [self.navigationItem setLeftBarButtonItem:item];
 }
 

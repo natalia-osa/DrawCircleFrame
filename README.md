@@ -54,7 +54,7 @@ I'm using UIBezierPath, which requires startPoint, endPoint and 2 middle points.
 #### Installation with CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. See the ["Getting Started" guide for more information](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking).
 ```ruby
-pod "DrawCircleFrame", "~> 1.0"
+pod "DrawCircleFrame"
 ```
 #### Submodule
 In your projects git folder type:
@@ -109,8 +109,8 @@ Clone and see the demo for more examples about implementation. You can add the v
 ```
 ## Author
 
-Natalia Osiecka, natalia.osa@appunite.com
-AppUnite.com
+Natalia Osiecka, osiecka.n@gmail.com
+Natalia Osiecka MobileSoftware
 
 ## License
 
@@ -118,4 +118,4 @@ Available under the Apache 2.0 license. See the LICENSE file for more info.
 
 ## Requirements
 
-Requires Xcode 5, targeting either iOS 5.0 or higher
+Requires Xcode 5, targeting either iOS 5.1.1 or higher

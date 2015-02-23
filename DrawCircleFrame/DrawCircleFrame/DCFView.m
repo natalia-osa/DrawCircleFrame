@@ -11,7 +11,7 @@
 
 @interface DCFView ()
 
-@property (nonatomic, strong) CAShapeLayer *bezierLayer;
+@property (nonatomic) CAShapeLayer *bezierLayer;
 
 @end
 
@@ -43,17 +43,17 @@
     [self.layer setMasksToBounds:YES];
     
     // default values
-    self.startPosition = DCFStartPositionTopLeft;
-    self.animationDuration = 1.5f;
-    self.lineWidth = 2.f;
-    self.lineColor = [UIColor redColor];
-    self.bezierApproximation = 2.25f;
-    self.marginValue = 10.f;
+    _startPosition = DCFStartPositionTopLeft;
+    _animationDuration = 1.5f;
+    _lineWidth = 2.f;
+    _lineColor = [UIColor redColor];
+    _bezierApproximation = 2.25f;
+    _marginValue = 10.f;
 }
 
 // increase frame by marginValue
 - (void)setFrame:(CGRect)frame {
-    frame = CGRectInset(frame, - _marginValue, - _marginValue);
+    frame = CGRectInset(frame, - self.marginValue, - self.marginValue);
     [super setFrame:frame];
 }
 
@@ -72,59 +72,64 @@
 #pragma mark - Bezier path
 
 - (void)drawBezierAnimated:(BOOL)animate {
-    if (!_bezierLayer) {
-        _bezierLayer = [[CAShapeLayer alloc] init];
+    CAShapeLayer *bezierLayer = self.bezierLayer;
+    if (!bezierLayer) {
+        bezierLayer = [[CAShapeLayer alloc] init];
     }
-    _bezierLayer.path = [self bezierPath].CGPath;
-    _bezierLayer.strokeColor = _lineColor.CGColor;
-    _bezierLayer.fillColor = [UIColor clearColor].CGColor;
-    _bezierLayer.lineWidth = _lineWidth;
-    _bezierLayer.strokeStart = 0.f;
-    _bezierLayer.strokeEnd = 1.f;
-    if (!_bezierLayer.superlayer || ![_bezierLayer.superlayer isEqual:self.layer]) {
-        [self.layer addSublayer:_bezierLayer];
+    bezierLayer.path = [self bezierPath].CGPath;
+    bezierLayer.strokeColor = self.lineColor.CGColor;
+    bezierLayer.fillColor = [UIColor clearColor].CGColor;
+    bezierLayer.lineWidth = self.lineWidth;
+    bezierLayer.strokeStart = 0.f;
+    bezierLayer.strokeEnd = 1.f;
+    if (!bezierLayer.superlayer || ![bezierLayer.superlayer isEqual:self.layer]) {
+        [self.layer addSublayer:bezierLayer];
     }
+    self.bezierLayer = bezierLayer;
     
     if (animate) {
         CABasicAnimation *animateStrokeEnd = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        animateStrokeEnd.duration = _animationDuration;
+        animateStrokeEnd.duration = self.animationDuration;
         animateStrokeEnd.fromValue = @0.f;
         animateStrokeEnd.toValue = @1.f;
-        [CATransaction setCompletionBlock:_completionBlock];
-        [_bezierLayer addAnimation:animateStrokeEnd forKey:@"strokeEndAnimation"];
+        [CATransaction setCompletionBlock:self.completionBlock];
+        [self.bezierLayer addAnimation:animateStrokeEnd forKey:@"strokeEndAnimation"];
         [CATransaction commit];
     }
 }
 
 - (UIBezierPath *)bezierPath {
     // circle points
-    CGRect rect = CGRectMake(_marginValue, _marginValue, CGRectGetWidth(self.bounds) - 2 * _marginValue, CGRectGetHeight(self.bounds) - 2 * _marginValue);
+    CGRect rect = CGRectMake(self.marginValue,
+                             self.marginValue,
+                             CGRectGetWidth(self.bounds) - 2 * self.marginValue,
+                             CGRectGetHeight(self.bounds) - 2 * self.marginValue);
     CGPoint point1, point2, point12, point21;;
     
-    switch (_startPosition) {
+    switch (self.startPosition) {
         case DCFStartPositionTopRight: {
-            point1 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMinY(rect) + floorf(_marginValue / 2));
-            point2 = CGPointMake(CGRectGetMaxX(rect) - floorf(_marginValue / 2), CGRectGetMinY(rect) - _marginValue);
-            point12 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect) * _bezierApproximation);
-            point21 = CGPointMake(- floorf(CGRectGetMaxX(rect) * _bezierApproximation / 2), CGRectGetMinY(rect));
+            point1 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMinY(rect) + floorf(self.marginValue / 2));
+            point2 = CGPointMake(CGRectGetMaxX(rect) - floorf(self.marginValue / 2), CGRectGetMinY(rect) - self.marginValue);
+            point12 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect) * self.bezierApproximation);
+            point21 = CGPointMake(- floorf(CGRectGetMaxX(rect) * self.bezierApproximation / 2), CGRectGetMinY(rect));
             break;
         } case DCFStartPositionTopLeft: {
-            point1 = CGPointMake(CGRectGetMinX(rect) - _marginValue, CGRectGetMinY(rect) + floorf(_marginValue / 2));
-            point2 = CGPointMake(CGRectGetMinX(rect) + floorf(_marginValue / 2), CGRectGetMinY(rect) - _marginValue);
-            point12 = CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(rect) * _bezierApproximation);
-            point21 = CGPointMake(CGRectGetMaxX(rect) * _bezierApproximation, CGRectGetMinY(rect));
+            point1 = CGPointMake(CGRectGetMinX(rect) - self.marginValue, CGRectGetMinY(rect) + floorf(self.marginValue / 2));
+            point2 = CGPointMake(CGRectGetMinX(rect) + floorf(self.marginValue / 2), CGRectGetMinY(rect) - self.marginValue);
+            point12 = CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(rect) * self.bezierApproximation);
+            point21 = CGPointMake(CGRectGetMaxX(rect) * self.bezierApproximation, CGRectGetMinY(rect));
             break;
         } case DCFStartPositionBottomRight: {
-            point1 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect) - floorf(_marginValue / 2));
-            point2 = CGPointMake(CGRectGetMaxX(rect) - floorf(_marginValue / 2), CGRectGetMaxY(rect) + _marginValue);
-            point12 = CGPointMake(CGRectGetMaxX(rect), - CGRectGetMinY(rect) * _bezierApproximation);
-            point21 = CGPointMake(- floorf(CGRectGetMaxX(rect) * _bezierApproximation / 2), CGRectGetMaxY(rect));
+            point1 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect) - floorf(self.marginValue / 2));
+            point2 = CGPointMake(CGRectGetMaxX(rect) - floorf(self.marginValue / 2), CGRectGetMaxY(rect) + self.marginValue);
+            point12 = CGPointMake(CGRectGetMaxX(rect), - CGRectGetMinY(rect) * self.bezierApproximation);
+            point21 = CGPointMake(- floorf(CGRectGetMaxX(rect) * self.bezierApproximation / 2), CGRectGetMaxY(rect));
             break;
         } case DCFStartPositionBottomLeft: {
-            point1 = CGPointMake(CGRectGetMinX(rect) - _marginValue, CGRectGetMaxY(rect) - floorf(_marginValue / 2));
-            point2 = CGPointMake(CGRectGetMinX(rect) + floorf(_marginValue / 2), CGRectGetMaxY(rect) + _marginValue);
-            point12 = CGPointMake(CGRectGetMinX(rect), - CGRectGetMinY(rect) * _bezierApproximation);
-            point21 = CGPointMake(CGRectGetMaxX(rect) * _bezierApproximation, CGRectGetMaxY(rect));
+            point1 = CGPointMake(CGRectGetMinX(rect) - self.marginValue, CGRectGetMaxY(rect) - floorf(self.marginValue / 2));
+            point2 = CGPointMake(CGRectGetMinX(rect) + floorf(self.marginValue / 2), CGRectGetMaxY(rect) + self.marginValue);
+            point12 = CGPointMake(CGRectGetMinX(rect), - CGRectGetMinY(rect) * self.bezierApproximation);
+            point21 = CGPointMake(CGRectGetMaxX(rect) * self.bezierApproximation, CGRectGetMaxY(rect));
             break;
         } default: {
             NSAssert(NO, @"You have provided unhandled start position of DCF");

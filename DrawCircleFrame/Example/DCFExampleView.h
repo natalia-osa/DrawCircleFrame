@@ -11,6 +11,6 @@
 
 @interface DCFExampleView : UIView
 
-@property (nonatomic, strong, readonly) DCFButton *button;
+@property (nonatomic, readonly) DCFButton *button;
 
 @end
