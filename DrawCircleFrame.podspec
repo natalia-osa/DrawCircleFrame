@@ -1,11 +1,11 @@
 Pod::Spec.new do |spec|
   spec.name         = "DrawCircleFrame"
-  spec.version      = "1.2"
+  spec.version      = "1.3.0"
   spec.summary      = "Text highlighting via drawing circle around it"
-  spec.homepage     = "http://appunite.com/"
+  spec.homepage     = "https://github.com/natalia-osa/"
   spec.license      = 'Apache 2.0'
   spec.author       = { "natalia.osiecka" => "osiecka.n@gmail.com" }
-  spec.source       = { :git => 'https://github.com/natalia-osa/DrawCircleFrame.git', :tag => '1.2'}
+  spec.source       = { :git => 'https://github.com/natalia-osa/DrawCircleFrame.git', :tag => '1.3.0'}
 
   spec.requires_arc = true
   spec.ios.deployment_target = '5.1.1'

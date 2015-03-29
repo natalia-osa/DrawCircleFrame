@@ -1,14 +1,16 @@
 //
-//  DCFButton.m
+//  NODCFButton.m
 //  DrawCircleFrame
 //
 //  Created by Natalia Osiecka on 29.7.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
-#import "DCFButton.h"
+#import "NODCFButton.h"
 
-@implementation DCFButton
+@implementation NODCFButton
+
+#pragma mark - Memory management
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -27,9 +29,11 @@
 }
 
 - (void)commonInit {
-    _dcfView = [[DCFView alloc] init];
+    _dcfView = [[NODCFView alloc] init];
     [self addSubview:_dcfView];
 }
+
+#pragma mark - Layout
 
 - (void)layoutSubviews {
     [super layoutSubviews];

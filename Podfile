@@ -1,4 +1,10 @@
-# ignore all warnings from all pods
+platform :ios, '5.1.1'
 inhibit_all_warnings!
 
 pod 'NOCategories'
+
+target 'DrawCircleFrameTests' do
+  pod 'Specta', '~> 0.4'
+  pod 'Expecta', '~> 0.2.4'
+end
+

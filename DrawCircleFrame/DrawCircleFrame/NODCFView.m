@@ -1,23 +1,24 @@
 //
-//  DCFView.m
+//  NODCFView.m
 //  DrawCircleFrame
 //
 //  Created by Natalia Osiecka on 22.7.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
-#import "DCFView.h"
+#import "NODCFView.h"
 #import <QuartzCore/QuartzCore.h>
+#import <NOCategories/NOCMacros.h>
 
-@interface DCFView ()
+@interface NODCFView ()
 
 @property (nonatomic) CAShapeLayer *bezierLayer;
 
 @end
 
-@implementation DCFView
+@implementation NODCFView
 
-#pragma mark - Inits
+#pragma mark - Memory management
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
@@ -108,26 +109,26 @@
     
     switch (self.startPosition) {
         case DCFStartPositionTopRight: {
-            point1 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMinY(rect) + floorf(self.marginValue / 2));
-            point2 = CGPointMake(CGRectGetMaxX(rect) - floorf(self.marginValue / 2), CGRectGetMinY(rect) - self.marginValue);
+            point1 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMinY(rect) + noc_floorCGFloat(self.marginValue / 2));
+            point2 = CGPointMake(CGRectGetMaxX(rect) - noc_floorCGFloat(self.marginValue / 2), CGRectGetMinY(rect) - self.marginValue);
             point12 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect) * self.bezierApproximation);
-            point21 = CGPointMake(- floorf(CGRectGetMaxX(rect) * self.bezierApproximation / 2), CGRectGetMinY(rect));
+            point21 = CGPointMake(- noc_floorCGFloat(CGRectGetMaxX(rect) * self.bezierApproximation / 2), CGRectGetMinY(rect));
             break;
         } case DCFStartPositionTopLeft: {
-            point1 = CGPointMake(CGRectGetMinX(rect) - self.marginValue, CGRectGetMinY(rect) + floorf(self.marginValue / 2));
-            point2 = CGPointMake(CGRectGetMinX(rect) + floorf(self.marginValue / 2), CGRectGetMinY(rect) - self.marginValue);
+            point1 = CGPointMake(CGRectGetMinX(rect) - self.marginValue, CGRectGetMinY(rect) + noc_floorCGFloat(self.marginValue / 2));
+            point2 = CGPointMake(CGRectGetMinX(rect) + noc_floorCGFloat(self.marginValue / 2), CGRectGetMinY(rect) - self.marginValue);
             point12 = CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(rect) * self.bezierApproximation);
             point21 = CGPointMake(CGRectGetMaxX(rect) * self.bezierApproximation, CGRectGetMinY(rect));
             break;
         } case DCFStartPositionBottomRight: {
-            point1 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect) - floorf(self.marginValue / 2));
-            point2 = CGPointMake(CGRectGetMaxX(rect) - floorf(self.marginValue / 2), CGRectGetMaxY(rect) + self.marginValue);
+            point1 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect) - noc_floorCGFloat(self.marginValue / 2));
+            point2 = CGPointMake(CGRectGetMaxX(rect) - noc_floorCGFloat(self.marginValue / 2), CGRectGetMaxY(rect) + self.marginValue);
             point12 = CGPointMake(CGRectGetMaxX(rect), - CGRectGetMinY(rect) * self.bezierApproximation);
-            point21 = CGPointMake(- floorf(CGRectGetMaxX(rect) * self.bezierApproximation / 2), CGRectGetMaxY(rect));
+            point21 = CGPointMake(- noc_floorCGFloat(CGRectGetMaxX(rect) * self.bezierApproximation / 2), CGRectGetMaxY(rect));
             break;
         } case DCFStartPositionBottomLeft: {
-            point1 = CGPointMake(CGRectGetMinX(rect) - self.marginValue, CGRectGetMaxY(rect) - floorf(self.marginValue / 2));
-            point2 = CGPointMake(CGRectGetMinX(rect) + floorf(self.marginValue / 2), CGRectGetMaxY(rect) + self.marginValue);
+            point1 = CGPointMake(CGRectGetMinX(rect) - self.marginValue, CGRectGetMaxY(rect) - noc_floorCGFloat(self.marginValue / 2));
+            point2 = CGPointMake(CGRectGetMinX(rect) + noc_floorCGFloat(self.marginValue / 2), CGRectGetMaxY(rect) + self.marginValue);
             point12 = CGPointMake(CGRectGetMinX(rect), - CGRectGetMinY(rect) * self.bezierApproximation);
             point21 = CGPointMake(CGRectGetMaxX(rect) * self.bezierApproximation, CGRectGetMaxY(rect));
             break;
@@ -144,6 +145,17 @@
     [path addCurveToPoint:point2 controlPoint1:point12 controlPoint2:point21];
     
     return path;
+}
+
+#pragma mark - Logging
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@: %p, %@: %lu, %@: %@, %@: %f, %@: %f>",
+            NSStringFromClass([self class]), self,
+            NSStringFromSelector(@selector(startPosition)), (long)self.startPosition,
+            NSStringFromSelector(@selector(lineColor)), self.lineColor,
+            NSStringFromSelector(@selector(lineWidth)), self.lineWidth,
+            NSStringFromSelector(@selector(animationDuration)), self.animationDuration];
 }
 
 @end

@@ -1,36 +1,31 @@
 //
-//  DCFExampleViewController.m
+//  NODCFExampleViewController.m
 //  DrawCircleFrame
 //
 //  Created by Natalia Osiecka on 22.7.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
-#import "DCFExampleViewController.h"
-#import "DCFExampleView.h"
+#import "NODCFExampleViewController.h"
+#import "NODCFExampleView.h"
 #import <NOCategories/NSString+NOCSize.h>
-#import "DCFButton.h"
+#import <NOCategories/UIViewController+NOCViewInitializer.h>
+#import "NODCFButton.h"
 
-@interface DCFExampleViewController ()
+@interface NODCFExampleViewController ()
 
-@property (nonatomic, weak, readonly) DCFExampleView *aView;
-@property (nonatomic, readonly) DCFButton *button;
+@property (nonatomic, weak, readonly) NODCFExampleView *aView;
+@property (nonatomic, readonly) NODCFButton *button;
 @property (nonatomic) NSTimer *timer;
 
 @end
 
-@implementation DCFExampleViewController
+@implementation NODCFExampleViewController
 
 #pragma mark - View lifecycle
 
 - (void)loadView {
-    CGRect rect = [[UIScreen mainScreen] applicationFrame];
-    DCFExampleView *view = [[DCFExampleView alloc] initWithFrame:rect];
-    [view setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-    
-    // local for easier access
-    _aView = view;
-    self.view = view;
+    _aView = [self noc_loadViewOfClass:[NODCFExampleView class]];
 }
 
 - (void)viewDidLoad {
@@ -63,7 +58,7 @@
 }
 
 - (void)setupNavigationItems {
-    _button = [[DCFButton alloc] init];
+    _button = [[NODCFButton alloc] init];
     [self.button.dcfView setLineColor:[UIColor greenColor]];
     
     __weak __typeof(self.button)weakButton = self.button;

@@ -1,21 +1,22 @@
 //
-//  DCFExampleView.m
+//  NODCFExampleView.m
 //  DrawCircleFrame
 //
 //  Created by Natalia Osiecka on 22.7.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
-#import "DCFExampleView.h"
+#import "NODCFExampleView.h"
 #import <NOCategories/NSString+NOCSize.h>
+#import <NOCategories/NOCMacros.h>
 
-@interface DCFExampleView ()
+@interface NODCFExampleView ()
 
 @property (nonatomic, readonly) CAGradientLayer *gradientLayer;
 
 @end
 
-@implementation DCFExampleView
+@implementation NODCFExampleView
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -27,7 +28,7 @@
         _gradientLayer.colors = [NSArray arrayWithObjects:(id)[[UIColor orangeColor] CGColor], (id)[[UIColor yellowColor] CGColor], nil];
         [self.layer insertSublayer:_gradientLayer atIndex:0];
         
-        _button = [[DCFButton alloc] init];
+        _button = [[NODCFButton alloc] init];
         [_button setTitle:NSLocalizedString(@"There is an animation around me!", nil) forState:UIControlStateNormal];
         [_button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [_button.dcfView setLineColor:[UIColor blueColor]];
@@ -44,8 +45,11 @@
     [super layoutSubviews];
     CGRect rect = self.bounds;
     
-    CGSize buttonSize = [self.button.titleLabel.text noc_backwardCompatibleSizeWithFont:self.button.titleLabel.font constrainedToSize:CGSizeMake(300.f, 200.f)];
-    CGRect buttonRect = CGRectMake(floorf((CGRectGetWidth(rect) - buttonSize.width) / 2.f), floorf((CGRectGetHeight(rect) - buttonSize.height) / 2.f), buttonSize.width, buttonSize.height);
+    CGSize maxButtonSize = CGSizeMake(300.f, 200.f);
+    CGSize buttonSize = [self.button.titleLabel.text noc_backwardCompatibleSizeWithFont:self.button.titleLabel.font constrainedToSize:maxButtonSize];
+    CGRect buttonRect = CGRectMake(noc_floorCGFloat((CGRectGetWidth(rect) - buttonSize.width) / 2.f),
+                                   noc_floorCGFloat((CGRectGetHeight(rect) - buttonSize.height) / 2.f),
+                                   buttonSize.width, buttonSize.height);
     [self.button setFrame:buttonRect];
 }
 

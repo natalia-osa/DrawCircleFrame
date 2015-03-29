@@ -1,6 +1,6 @@
-
 [![Version](https://cocoapod-badges.herokuapp.com/v/DrawCircleFrame/badge.png)](http://cocoadocs.org/docsets/DrawCircleFrame) 
 [![Platform](https://cocoapod-badges.herokuapp.com/p/DrawCircleFrame/badge.png)](http://cocoadocs.org/docsets/DrawCircleFrame) 
+![License](https://img.shields.io/badge/license-Apache_2-green.svg?style=flat)
 
 <p align="center" ><img src="https://raw.github.com/natalia-osa/DrawCircleFrame/master/ReadmeImages/Demo.gif" alt="DrawCircleFrame" title="DrawCircleFrame" height="240"></p>
 
@@ -52,7 +52,7 @@ I'm using UIBezierPath, which requires startPoint, endPoint and 2 middle points.
 
 ## Installation:
 #### Installation with CocoaPods
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. See the ["Getting Started" guide for more information](https://github.com/AFNetworking/AFNetworking/wiki/Getting-Started-with-AFNetworking).
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries.
 ```ruby
 pod "DrawCircleFrame"
 ```
@@ -65,36 +65,25 @@ git submodule update
 ```
 Copy all files from DrawCircleFrame/DrawCircleFrame folder.
 #### Just download & attach
-This is strongly disadvised as you won't be able to see code updates. Clone or download the source, copy all files from DrawCircleFrame/DrawCircleFrame folder.
+This is strongly misadvised as you won't be able to see code updates. Clone or download the source, copy all files from DrawCircleFrame/DrawCircleFrame folder.
 
 ## Implementation:
 Clone and see the demo for more examples about implementation. You can add the view via Storyboard or using code:
 ```objective-c
 // in your view.h download the library
-#import <DrawCircleFrame/DCFButton.h>
-#import <DrawCircleFrame/NSString+Size.h>
+#import <DrawCircleFrame/NODCFButton.h>
+#import <NOCategories/NSString+NOCSize.h>
 // then add a property
-@property (nonatomic, strong) DCFButton *button;
+@property (nonatomic) NODCFButton *button;
 
 // alloc & init the view or setup this via storyboard
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _button = [[DCFButton alloc] init];
+        _button = [[NODCFButton alloc] initWithFrame:CGRectMake(0, 0, 200, 30)];
         [self addSubview:_button];
     }
     return self;
-}
-
-// update the frame (or via storyboard)
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
-    CGSize buttonSize = [_button.titleLabel.text ios67sizeWithFont:_button.titleLabel.font constrainedToSize:CGSizeMake(300.f, 200.f)];
-    CGRect buttonRect = CGRectMake(floorf((CGRectGetWidth(rect) - buttonSize.width) / 2.f), 
-                                  floorf((CGRectGetHeight(rect) - buttonSize.height) / 2.f), 
-                                  buttonSize.width, buttonSize.height);
-	[_button setFrame:buttonRect];
 }
 
 // in your controller you can change outlook of the control
@@ -110,7 +99,7 @@ Clone and see the demo for more examples about implementation. You can add the v
 ## Author
 
 Natalia Osiecka, osiecka.n@gmail.com
-Natalia Osiecka MobileSoftware
+- [Natalia Osiecka](https://github.com/natalia-osa/) ([@vivelee](https://twitter.com/vivelee))
 
 ## License
 

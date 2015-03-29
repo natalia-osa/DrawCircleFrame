@@ -19,12 +19,13 @@
 		645947F8197E75C4000B80E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645947E0197E75C4000B80E7 /* UIKit.framework */; };
 		64594800197E75C4000B80E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 645947FE197E75C4000B80E7 /* InfoPlist.strings */; };
 		64594802197E75C4000B80E7 /* DrawCircleFrameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64594801197E75C4000B80E7 /* DrawCircleFrameTests.m */; };
-		64594818197E78A9000B80E7 /* DCFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64594817197E78A9000B80E7 /* DCFView.m */; };
-		6459481B197E78CE000B80E7 /* DCFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6459481A197E78CE000B80E7 /* DCFAppDelegate.m */; };
-		6459481E197E78D7000B80E7 /* DCFExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6459481D197E78D7000B80E7 /* DCFExampleView.m */; };
-		64594821197E78DF000B80E7 /* DCFExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64594820197E78DF000B80E7 /* DCFExampleViewController.m */; };
+		64594818197E78A9000B80E7 /* NODCFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64594817197E78A9000B80E7 /* NODCFView.m */; };
+		6459481B197E78CE000B80E7 /* NODCFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6459481A197E78CE000B80E7 /* NODCFAppDelegate.m */; };
+		6459481E197E78D7000B80E7 /* NODCFExampleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6459481D197E78D7000B80E7 /* NODCFExampleView.m */; };
+		64594821197E78DF000B80E7 /* NODCFExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64594820197E78DF000B80E7 /* NODCFExampleViewController.m */; };
 		64594823197E845A000B80E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64594822197E845A000B80E7 /* QuartzCore.framework */; };
-		64C696321987A115006056E8 /* DCFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C696311987A115006056E8 /* DCFButton.m */; };
+		64C696321987A115006056E8 /* NODCFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C696311987A115006056E8 /* NODCFButton.m */; };
+		D5962BF151321C8EABCA1D2F /* libPods-DrawCircleFrameTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9799CA9BD847E9F77AAF4 /* libPods-DrawCircleFrameTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A50583AFC95844509E3F17E /* Pods-DrawCircleFrameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawCircleFrameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawCircleFrameTests/Pods-DrawCircleFrameTests.release.xcconfig"; sourceTree = "<group>"; };
+		2434613F8239FFED6093AC3E /* libPods-DrawCircleFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawCircleFrame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A21ABAC30A7F5F497835DBE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		645947D9197E75C4000B80E7 /* DrawCircleFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawCircleFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645947DC197E75C4000B80E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,26 +49,27 @@
 		645947E4197E75C4000B80E7 /* DrawCircleFrame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrawCircleFrame-Info.plist"; sourceTree = "<group>"; };
 		645947E6197E75C4000B80E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		645947E8197E75C4000B80E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		645947EA197E75C4000B80E7 /* DrawCircleFrame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawCircleFrame-Prefix.pch"; sourceTree = "<group>"; };
 		645947EE197E75C4000B80E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		645947F4197E75C4000B80E7 /* DrawCircleFrameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawCircleFrameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		645947F5197E75C4000B80E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		645947FD197E75C4000B80E7 /* DrawCircleFrameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrawCircleFrameTests-Info.plist"; sourceTree = "<group>"; };
 		645947FF197E75C4000B80E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		64594801197E75C4000B80E7 /* DrawCircleFrameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawCircleFrameTests.m; sourceTree = "<group>"; };
-		64594816197E78A9000B80E7 /* DCFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCFView.h; path = DrawCircleFrame/DCFView.h; sourceTree = "<group>"; };
-		64594817197E78A9000B80E7 /* DCFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCFView.m; path = DrawCircleFrame/DCFView.m; sourceTree = "<group>"; };
-		64594819197E78CE000B80E7 /* DCFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCFAppDelegate.h; path = Example/DCFAppDelegate.h; sourceTree = "<group>"; };
-		6459481A197E78CE000B80E7 /* DCFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCFAppDelegate.m; path = Example/DCFAppDelegate.m; sourceTree = "<group>"; };
-		6459481C197E78D7000B80E7 /* DCFExampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCFExampleView.h; path = Example/DCFExampleView.h; sourceTree = "<group>"; };
-		6459481D197E78D7000B80E7 /* DCFExampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCFExampleView.m; path = Example/DCFExampleView.m; sourceTree = "<group>"; };
-		6459481F197E78DF000B80E7 /* DCFExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCFExampleViewController.h; path = Example/DCFExampleViewController.h; sourceTree = "<group>"; };
-		64594820197E78DF000B80E7 /* DCFExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCFExampleViewController.m; path = Example/DCFExampleViewController.m; sourceTree = "<group>"; };
+		64594816197E78A9000B80E7 /* NODCFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NODCFView.h; path = DrawCircleFrame/NODCFView.h; sourceTree = "<group>"; };
+		64594817197E78A9000B80E7 /* NODCFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NODCFView.m; path = DrawCircleFrame/NODCFView.m; sourceTree = "<group>"; };
+		64594819197E78CE000B80E7 /* NODCFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NODCFAppDelegate.h; path = Example/NODCFAppDelegate.h; sourceTree = "<group>"; };
+		6459481A197E78CE000B80E7 /* NODCFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NODCFAppDelegate.m; path = Example/NODCFAppDelegate.m; sourceTree = "<group>"; };
+		6459481C197E78D7000B80E7 /* NODCFExampleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NODCFExampleView.h; path = Example/NODCFExampleView.h; sourceTree = "<group>"; };
+		6459481D197E78D7000B80E7 /* NODCFExampleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NODCFExampleView.m; path = Example/NODCFExampleView.m; sourceTree = "<group>"; };
+		6459481F197E78DF000B80E7 /* NODCFExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NODCFExampleViewController.h; path = Example/NODCFExampleViewController.h; sourceTree = "<group>"; };
+		64594820197E78DF000B80E7 /* NODCFExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NODCFExampleViewController.m; path = Example/NODCFExampleViewController.m; sourceTree = "<group>"; };
 		64594822197E845A000B80E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		64C696301987A115006056E8 /* DCFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCFButton.h; path = DrawCircleFrame/DCFButton.h; sourceTree = "<group>"; };
-		64C696311987A115006056E8 /* DCFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCFButton.m; path = DrawCircleFrame/DCFButton.m; sourceTree = "<group>"; };
+		64C696301987A115006056E8 /* NODCFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NODCFButton.h; path = DrawCircleFrame/NODCFButton.h; sourceTree = "<group>"; };
+		64C696311987A115006056E8 /* NODCFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NODCFButton.m; path = DrawCircleFrame/NODCFButton.m; sourceTree = "<group>"; };
 		97E7BA05CFE39E345D81160B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9C3955F68185835A635B04E5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1E2C31AB454AF5F74D74A28 /* Pods-DrawCircleFrameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawCircleFrameTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawCircleFrameTests/Pods-DrawCircleFrameTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEC9799CA9BD847E9F77AAF4 /* libPods-DrawCircleFrameTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawCircleFrameTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 				645947F6197E75C4000B80E7 /* XCTest.framework in Frameworks */,
 				645947F8197E75C4000B80E7 /* UIKit.framework in Frameworks */,
 				645947F7197E75C4000B80E7 /* Foundation.framework in Frameworks */,
+				D5962BF151321C8EABCA1D2F /* libPods-DrawCircleFrameTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +104,8 @@
 			children = (
 				5A21ABAC30A7F5F497835DBE /* Pods.debug.xcconfig */,
 				97E7BA05CFE39E345D81160B /* Pods.release.xcconfig */,
+				D1E2C31AB454AF5F74D74A28 /* Pods-DrawCircleFrameTests.debug.xcconfig */,
+				0A50583AFC95844509E3F17E /* Pods-DrawCircleFrameTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -132,6 +139,8 @@
 				645947E0197E75C4000B80E7 /* UIKit.framework */,
 				645947F5197E75C4000B80E7 /* XCTest.framework */,
 				9C3955F68185835A635B04E5 /* libPods.a */,
+				2434613F8239FFED6093AC3E /* libPods-DrawCircleFrame.a */,
+				DEC9799CA9BD847E9F77AAF4 /* libPods-DrawCircleFrameTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,8 +148,8 @@
 		645947E2197E75C4000B80E7 /* DrawCircleFrame */ = {
 			isa = PBXGroup;
 			children = (
-				64594819197E78CE000B80E7 /* DCFAppDelegate.h */,
-				6459481A197E78CE000B80E7 /* DCFAppDelegate.m */,
+				64594819197E78CE000B80E7 /* NODCFAppDelegate.h */,
+				6459481A197E78CE000B80E7 /* NODCFAppDelegate.m */,
 				64594815197E786C000B80E7 /* Example */,
 				6459480C197E75DB000B80E7 /* DrawCircleFrame */,
 				6459480B197E75D0000B80E7 /* Resources */,
@@ -155,7 +164,6 @@
 				645947E4197E75C4000B80E7 /* DrawCircleFrame-Info.plist */,
 				645947E5197E75C4000B80E7 /* InfoPlist.strings */,
 				645947E8197E75C4000B80E7 /* main.m */,
-				645947EA197E75C4000B80E7 /* DrawCircleFrame-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -189,10 +197,10 @@
 		6459480C197E75DB000B80E7 /* DrawCircleFrame */ = {
 			isa = PBXGroup;
 			children = (
-				64594816197E78A9000B80E7 /* DCFView.h */,
-				64594817197E78A9000B80E7 /* DCFView.m */,
-				64C696301987A115006056E8 /* DCFButton.h */,
-				64C696311987A115006056E8 /* DCFButton.m */,
+				64594816197E78A9000B80E7 /* NODCFView.h */,
+				64594817197E78A9000B80E7 /* NODCFView.m */,
+				64C696301987A115006056E8 /* NODCFButton.h */,
+				64C696311987A115006056E8 /* NODCFButton.m */,
 			);
 			name = DrawCircleFrame;
 			sourceTree = "<group>";
@@ -200,8 +208,8 @@
 		6459480D197E75E8000B80E7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6459481F197E78DF000B80E7 /* DCFExampleViewController.h */,
-				64594820197E78DF000B80E7 /* DCFExampleViewController.m */,
+				6459481F197E78DF000B80E7 /* NODCFExampleViewController.h */,
+				64594820197E78DF000B80E7 /* NODCFExampleViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -209,8 +217,8 @@
 		6459480E197E75EF000B80E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6459481C197E78D7000B80E7 /* DCFExampleView.h */,
-				6459481D197E78D7000B80E7 /* DCFExampleView.m */,
+				6459481C197E78D7000B80E7 /* NODCFExampleView.h */,
+				6459481D197E78D7000B80E7 /* NODCFExampleView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -251,9 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64594808197E75C4000B80E7 /* Build configuration list for PBXNativeTarget "DrawCircleFrameTests" */;
 			buildPhases = (
+				54E30F84CD22EB9363CB88AB /* Check Pods Manifest.lock */,
 				645947F0197E75C4000B80E7 /* Sources */,
 				645947F1197E75C4000B80E7 /* Frameworks */,
 				645947F2197E75C4000B80E7 /* Resources */,
+				BFD52BB146A156BC17C8D764 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,9 +281,9 @@
 		645947D1197E75C4000B80E7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = MG;
+				CLASSPREFIX = NODCF;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = AppUnite;
+				ORGANIZATIONNAME = iOskApps;
 				TargetAttributes = {
 					645947F3197E75C4000B80E7 = {
 						TestTargetID = 645947D8197E75C4000B80E7;
@@ -319,6 +329,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		54E30F84CD22EB9363CB88AB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BFD52BB146A156BC17C8D764 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrawCircleFrameTests/Pods-DrawCircleFrameTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F698A817EB4979820374E92D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,11 +411,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				645947E9197E75C4000B80E7 /* main.m in Sources */,
-				64594818197E78A9000B80E7 /* DCFView.m in Sources */,
-				6459481B197E78CE000B80E7 /* DCFAppDelegate.m in Sources */,
-				64594821197E78DF000B80E7 /* DCFExampleViewController.m in Sources */,
-				64C696321987A115006056E8 /* DCFButton.m in Sources */,
-				6459481E197E78D7000B80E7 /* DCFExampleView.m in Sources */,
+				64594818197E78A9000B80E7 /* NODCFView.m in Sources */,
+				6459481B197E78CE000B80E7 /* NODCFAppDelegate.m in Sources */,
+				64594821197E78DF000B80E7 /* NODCFExampleViewController.m in Sources */,
+				64C696321987A115006056E8 /* NODCFButton.m in Sources */,
+				6459481E197E78D7000B80E7 /* NODCFExampleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,8 +535,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DrawCircleFrame/DrawCircleFrame-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "DrawCircleFrame/DrawCircleFrame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,8 +550,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DrawCircleFrame/DrawCircleFrame-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "DrawCircleFrame/DrawCircleFrame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,6 +561,7 @@
 		};
 		64594809197E75C4000B80E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1E2C31AB454AF5F74D74A28 /* Pods-DrawCircleFrameTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrawCircleFrame.app/DrawCircleFrame";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -528,21 +569,24 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DrawCircleFrame/DrawCircleFrame-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "DrawCircleFrameTests/DrawCircleFrameTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				WARNING_CFLAGS = "-Wfloat-equal";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
 		6459480A197E75C4000B80E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A50583AFC95844509E3F17E /* Pods-DrawCircleFrameTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrawCircleFrame.app/DrawCircleFrame";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -550,11 +594,13 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DrawCircleFrame/DrawCircleFrame-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "DrawCircleFrameTests/DrawCircleFrameTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
+				WARNING_CFLAGS = "-Wfloat-equal";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

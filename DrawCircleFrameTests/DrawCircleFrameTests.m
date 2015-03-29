@@ -3,7 +3,7 @@
 //  DrawCircleFrameTests
 //
 //  Created by Natalia Osiecka on 22.7.2014.
-//  Copyright (c) 2014 AppUnite. All rights reserved.
+//  Copyright (c) 2014 iOskApps. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
