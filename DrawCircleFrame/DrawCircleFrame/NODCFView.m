@@ -8,7 +8,7 @@
 
 #import "NODCFView.h"
 #import <QuartzCore/QuartzCore.h>
-#import <NOCategories/NOCMacros.h>
+#import <NOCategories/NOCCGFloatMath.h>
 
 @interface NODCFView ()
 

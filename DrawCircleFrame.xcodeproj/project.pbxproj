@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13F90B542EBFA205A358564F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3955F68185835A635B04E5 /* libPods.a */; };
+		642194E31B66356500EFC1E8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642194E21B66356500EFC1E8 /* Launch Screen.storyboard */; };
 		645947DD197E75C4000B80E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645947DC197E75C4000B80E7 /* Foundation.framework */; };
 		645947DF197E75C4000B80E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645947DE197E75C4000B80E7 /* CoreGraphics.framework */; };
 		645947E1197E75C4000B80E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645947E0197E75C4000B80E7 /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 		0A50583AFC95844509E3F17E /* Pods-DrawCircleFrameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawCircleFrameTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawCircleFrameTests/Pods-DrawCircleFrameTests.release.xcconfig"; sourceTree = "<group>"; };
 		2434613F8239FFED6093AC3E /* libPods-DrawCircleFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawCircleFrame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A21ABAC30A7F5F497835DBE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		642194E21B66356500EFC1E8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		645947D9197E75C4000B80E7 /* DrawCircleFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawCircleFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		645947DC197E75C4000B80E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		645947DE197E75C4000B80E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				645947EE197E75C4000B80E7 /* Images.xcassets */,
+				642194E21B66356500EFC1E8 /* Launch Screen.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642194E31B66356500EFC1E8 /* Launch Screen.storyboard in Resources */,
 				645947E7197E75C4000B80E7 /* InfoPlist.strings in Resources */,
 				645947EF197E75C4000B80E7 /* Images.xcassets in Resources */,
 			);
@@ -489,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -522,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -539,7 +543,7 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "DrawCircleFrame/DrawCircleFrame-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wfloat-equal";
 				WRAPPER_EXTENSION = app;
@@ -556,7 +560,7 @@
 				GCC_PREFIX_HEADER = "";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "DrawCircleFrame/DrawCircleFrame-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WARNING_CFLAGS = "-Wfloat-equal";
 				WRAPPER_EXTENSION = app;

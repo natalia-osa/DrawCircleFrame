@@ -96,6 +96,13 @@ Clone and see the demo for more examples about implementation. You can add the v
     [_dcfExampleView.button.dcfView drawBezierAnimated:YES];
 }
 ```
+
+## ChangeLog
+- 1.3.0 General code refactor. Added class prefixes. Removed prefix file.
+- 1.2 Fixed wrong dependency in podspec.
+- 1.1 Added NOCategories subspec.
+- 1.0 Added basic classes. Added demo.
+
 ## Author
 
 Natalia Osiecka, osiecka.n@gmail.com
@@ -107,4 +114,4 @@ Available under the Apache 2.0 license. See the LICENSE file for more info.
 
 ## Requirements
 
-Requires Xcode 5, targeting either iOS 5.1.1 or higher
+Requires Xcode 5, targeting either iOS 6.0 or higher
